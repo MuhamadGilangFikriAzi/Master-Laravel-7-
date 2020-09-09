@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
-@section('title','home')
+@section('title','Home')
 
-
-@section('body')
+@section('content')
+{{-- Page Title --}}
 
 <div class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
                         <div class="card-title">test</div>

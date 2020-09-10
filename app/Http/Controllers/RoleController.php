@@ -44,12 +44,12 @@ class RoleController extends Controller
         if ($request->checked == "true") {
             $role->givePermissionTo($permission);
             $data = array(
-                'massage' => 'Data berhasil disimpan'
+                'massage' => 'Permission berhasil dipilih'
             );
         } else {
             $role->revokePermissionTo($permission);
             $data = array(
-                'massage' => 'Data berhasil disimpan'
+                'massage' => 'permission berhasil dihapus'
             );
         }
         return response()->json($data, 200);

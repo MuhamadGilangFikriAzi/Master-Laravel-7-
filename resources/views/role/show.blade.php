@@ -22,9 +22,9 @@
                 <div class="card col-sm-12">
                     <div class="card-header"><label>Permission</label></div>
                     <div class="card-body">
-                        <div class="col-sm-6">
+                        <div class="col-sm">
                             <div>
-                                <table class="table">
+                                <table class="table table-responsive">
                                     <tbody>
                                         <tr class="input-group-sm">
                                         @foreach ($permission as $key => $value)

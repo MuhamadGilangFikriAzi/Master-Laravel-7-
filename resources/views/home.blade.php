@@ -15,7 +15,11 @@
                     </div>
 
                     <div class="card-body">
-                        test doang cuyy
+                        <x-form.input label="input pertama" type="text" name="nama"/>
+                        <x-form.input label="ini coba ke 2" type="number" name="test"/>
+                        <x-form.input label="tanggal" type="date" name="date"/>
+                        <x-form.select label="buah" name="buah" :data="$data" />
+                        <x-form.area label="alamat" name="alamat"/>
                     </div>
                 </div>
             </div>

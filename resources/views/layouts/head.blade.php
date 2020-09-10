@@ -26,3 +26,7 @@
 @include('adminlte::plugins', ['type' => 'js'])
 
 <script src="{{ asset('vendor/adminlte/dist/js/adminlte.min.js') }}"></script>
+
+{{-- Select2 Js --}}
+<link href="{{ asset('js/select2/dist/css/select2.min.css') }}" rel="stylesheet" />
+<script src="{{ asset('js/select2/dist/js/select2.min.js') }}"></script>

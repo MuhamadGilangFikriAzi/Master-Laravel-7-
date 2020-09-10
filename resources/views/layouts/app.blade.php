@@ -27,16 +27,23 @@
         <div class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
+
                     {{-- Page Title --}}
                     <div class="col-sm-6">
                         <h1 class="m-0 text-dark">@yield('title')</h1>
                     </div>
-                    {{-- <div class="col-sm-6">
+
+                    {{-- Make Breadcrumb based on path --}}
+                    @php
+                        $breadcrumb  = explode('/',request()->path());
+                    @endphp
+                    <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item">home</li>
-                            <li class="breadcrumb-item active">test</li>
+                            @foreach ($breadcrumb as $item)
+                                <li class="breadcrumb-item @if($loop->last) active @endif" >{{ $item }}</li>
+                            @endforeach
                         </ol>
-                    </div> --}}
+                    </div>
                 </div>
             </div>
         </div>

@@ -14,22 +14,25 @@ class UsersTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name' => 'Super Admin',
+            'username' => 'superadmin',
             'email' => 'superadmin@mail.com',
-            'password' => bcrypt('super'),
+            'password' => bcrypt('superadmin'),
             'created_at' => Carbon::now()
         ]);
 
         DB::table('users')->insert([
             'name' => 'Admin',
+            'username' => 'admin',
             'email' => 'admin@mail.com',
-            'password' => bcrypt('123456'),
+            'password' => bcrypt('admin'),
             'created_at' => Carbon::now()
         ]);
 
         DB::table('users')->insert([
             'name' => 'user',
+            'username' => 'user',
             'email' => 'user@mail.com',
-            'password' => bcrypt('drago123456'),
+            'password' => bcrypt('user'),
             'created_at' => Carbon::now()
         ]);
     }

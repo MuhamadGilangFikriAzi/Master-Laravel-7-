@@ -15,11 +15,16 @@
                     </div>
 
                     <div class="card-body">
-                        <x-form.input label="input pertama" type="text" name="nama"/>
-                        <x-form.input label="ini coba ke 2" type="number" name="test"/>
-                        <x-form.input label="tanggal" type="date" name="date"/>
-                        <x-form.select label="buah" name="buah" :data="$data" />
-                        <x-form.area label="alamat" name="alamat"/>
+                        <form action="{{ route('home.store') }}" method="POST">
+                            @csrf
+
+                            <x-form.input label="nama" type="text" name="nama"/>
+                            <x-form.input label="nomor" type="number" name="test"/>
+                            <x-form.input label="tanggal" type="date" name="date"/>
+                            <x-form.select label="buah" name="buah" :data="$data" />
+                            <x-form.area label="alamat" name="alamat"/>
+                            <x-form.submit urlIndex="home" />
+                        </form>
                     </div>
                 </div>
             </div>

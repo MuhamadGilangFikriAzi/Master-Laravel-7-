@@ -22,6 +22,7 @@ Auth::routes();
 Route::middleware('auth:web')->group(function () {
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('test', 'HomeController@test')->name('test');
+    Route::post('input', 'HomeController@store')->name('home.store');
 
     Route::prefix('settings')->group(function () {
 

@@ -35,4 +35,18 @@ class HomeController extends Controller
     {
         return view('test');
     }
+
+    public function store()
+    {
+        Request()->validate([
+            'nama' => 'required',
+            'test' => 'required',
+            'date' => 'required',
+            'buah' => 'required',
+            'alamat' => 'required',
+        ]);
+        dd(Request()->all());
+
+        return redirect()->back();
+    }
 }
